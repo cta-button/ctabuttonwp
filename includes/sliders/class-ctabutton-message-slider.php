@@ -27,7 +27,7 @@ class CTAButton_Message_Slider implements CTAButton_Slider_Interface {
                         if($type['enabled'] && $type['showOnCurrentPage']) {
                         ?>                            
                             <a href="<?php echo esc_url( $type['url'] ); ?>" class="launch-btn" style="background-color: <?php echo esc_attr( $type['btnColor'] ); ?>" target="_blank"> 
-                                <?php echo esc_html( $type['icon'] ); ?>
+                                <?php echo wp_kses_post( $type['icon'] ); ?>
                             </a>                                    
                         <?php
                         }            
