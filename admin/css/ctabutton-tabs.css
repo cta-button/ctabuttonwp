@@ -1,0 +1,97 @@
+fieldset.radio-container {
+  display: flex;
+  gap: 20px;
+}
+.form-table {
+  margin-top: 0
+}
+.form-table td fieldset.radio-container label {
+  line-height: 40px;
+}
+.form-table th {
+padding: 10px;
+padding-left: 0;
+} 
+.form-table td {
+padding: 10px;
+}
+fieldset.radio-container label {
+  height: 40px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+/* Accordion styles */
+.tabs {
+border-radius: 8px;
+overflow: hidden;
+border:1px solid #bbbbbb
+}
+.tab {
+width: 100%;
+color: white;
+overflow: hidden;
+border-bottom: 1px solid #bbbbbb;
+}
+.tab:last-child {
+  border-bottom: 0 !important;
+  }
+.tab-label {
+display: flex;
+justify-content: space-between;
+padding: 1em;
+background: #ffffff;
+font-weight: 400;
+cursor: pointer;
+color:#000000;
+font-size: 17px
+/* Icon */
+}
+.tab-label:hover {
+  background: #ffffff;
+  font-weight: 400;
+  cursor: pointer;
+  color:#000000
+}
+.tab-label::after {
+content: "\276F";
+width: 1em;
+height: 1em;
+text-align: center;
+transition: all 0.35s;
+}
+.tab-content {
+max-height: 0;
+padding: 0 1em;
+color: #000000;
+background: white;
+transition: all 0.35s;
+overflow-y: scroll;
+}
+.tab-close {
+display: flex;
+justify-content: flex-end;
+padding: 1em;
+font-size: 0.75em;
+color:#000000;
+background: #ffffff;
+cursor: pointer;
+}
+.tab-close:hover {
+background: #1a252f;
+}
+input[type="radio"] {
+position: absolute;
+opacity: 0;
+z-index: -1;
+}
+input:checked + .tab-label {
+background: #f5f5f5;
+}
+input:checked + .tab-label::after {
+transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+max-height: 100vh;
+padding: 1em;
+}

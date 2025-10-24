@@ -1,0 +1,174 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.ctabutton {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 500;
+    border: none;
+    margin: 0;
+    max-width: 576px;
+}
+.ctabutton .bottom-sheet {
+    padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+    display: none;
+}
+.ctabutton .bottom-sheet.open {
+    display: block;
+    animation: fadeIn 0.6s;
+    -webkit-animation: fadeIn 0.6s;
+    -moz-animation: fadeIn 0.6s;
+    -o-animation: fadeIn 0.6s;
+    -ms-animation: fadeIn 0.6s;
+}
+.ctabutton .bottom-sheet a {
+    text-decoration: none;
+}
+
+.ctabutton .bottom-sheet .close {
+    font-size: 18px;
+    margin: 0;
+    color: var(--wp-admin-theme-color);
+    float: right;
+}
+
+.ctabutton .bottom-sheet h4 {
+    color: var(--wp-admin-theme-color);
+    font-size: larger;
+    font-weight: 600;
+    padding: 0 0 20px 0;
+    margin-bottom: 0;
+}
+
+.ctabutton .bottom-sheet .sheet-item {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.ctabutton .bottom-sheet .sheet-item .sheet-image {
+    display: inline-block;
+    width: 18%;
+    float: left;
+    padding-right: 2%;
+}
+
+.ctabutton .bottom-sheet .sheet-item .sheet-image img {
+    height: auto;
+    max-width: 100%;
+}
+
+.ctabutton .bottom-sheet .sheet-item .sheet-content h5 {
+    font-size: medium;
+    text-transform: none;
+    font-weight: 700;
+    color: var(--wc-secondary-text);
+    margin: 0;
+}
+
+.ctabutton .bottom-sheet .sheet-item .sheet-content p {
+    font-size: 13px;
+    line-height: normal;
+    margin-bottom: 1.3em;
+}
+
+.ctabutton .bottom-sheet .sheet-button {
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 13px ;
+    font-weight: 600;
+    background-color: var(--woocommerce, #0170B9);
+    margin: 0px;
+}
+.ctabutton a.launch-btn,
+.ctabutton button.launch-btn {
+    font-weight: 600;
+    background-color: #05ba94;
+    border-radius: 3rem;
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    height: 48px;
+    margin: 15px;
+}
+.ctabutton.message-slider a.launch-btn {
+    margin-left: 8px;
+    margin-right: 0;
+    border-radius: 6px;
+    display: block;
+    height: 60px; 
+    width: 60px;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+.ctabutton.message-slider a.launch-btn .dashicons {
+    margin: 0;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.ctabutton .bottom-sheet .sheet-redirect {
+    display: flex; 
+    justify-content: space-evenly;
+    margin-top: 40px;
+    align-items: center;
+}
+@media only screen and (max-width: 600px) {    
+    .ctabutton .bottom-sheet .sheet-redirect {
+        flex-direction: column;
+    }
+}
+.ctabutton .bottom-sheet .sheet-redirect div:first-child {
+    flex: 2;
+    padding-right: 10px;
+}
+.ctabutton .bottom-sheet .sheet-redirect div:last-child {
+    flex: 1;
+}
+.ctabutton .bottom-sheet .sheet-redirect .sheet-button {
+    padding: 14px 28px;
+    width: 100%;
+    line-height: 1.5;
+}
+.ctabutton .dashicons {
+    text-decoration: none;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/** helpers **/
+.ctabutton .mb-15 {
+    margin-bottom: 15px;
+}
