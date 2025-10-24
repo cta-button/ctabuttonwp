@@ -14,6 +14,14 @@ class CTAButton_Message_Slider implements CTAButton_Slider_Settings_Interface {
 		$this->register_settings();
     }
 
+	public function ctabutton_sanitize_settings($input) {
+		// if (is_array($input)) {
+		// 	return array_map('sanitize_text_field', $input);
+		// }
+		// return sanitize_text_field($input);
+		return $input;
+	}
+
     public function register_settings() {
 
 		$group_name  = $this->plugin_name.'-settings-' . $this->slider_id;
@@ -23,8 +31,8 @@ class CTAButton_Message_Slider implements CTAButton_Slider_Settings_Interface {
 			$group_name,
 			$option_name,
 			array(
-				'type' => 'string', 
-				'sanitize_callback' => 'sanitize_text_field',
+				'type' => 'array',
+    			'sanitize_callback' => [$this, 'ctabutton_sanitize_settings'],
 				'default' => NULL,
 			)
 		);
