@@ -124,8 +124,8 @@ class CTAButton_Call_Slider implements CTAButton_Slider_Settings_Interface {
 			$this->plugin_name . '-settings-' . $this->slider_id,
 			$option_name,
 			array(
-				'type' => 'string', 
-				'sanitize_callback' => 'sanitize_text_field',
+				'type' => 'array',
+    			'sanitize_callback' => [$this, 'ctabutton_sanitize_settings'],
 				'default' => NULL,
 			)
 		);

@@ -93,8 +93,8 @@
 						
 						var phoneFieldName = $intlTelInput.attr('name');
 
-						var phoneData = $(".intl-tel-input").intlTelInput("getSelectedCountryData")
-						var number = $(".intl-tel-input").intlTelInput("getNumber")
+						var phoneData = $intlTelInput.intlTelInput("getSelectedCountryData")
+						var number = $intlTelInput.intlTelInput("getNumber")
 			
 						if( number.charAt(0) !== '+' ) {
 							number = '+' + phoneData.dialCode + number

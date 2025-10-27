@@ -16,7 +16,7 @@
  * Plugin Name:       CTA Button
  * Plugin URI:        https://www.ctabutton.com
  * Description:       Add links for text and call on your website.
- * Version:           1.1.3
+ * Version:           1.1.4
  * Author:            CTA Button
  * Author URI:        https://www.ctabutton.com
  * License:           GPL-2.0+
@@ -33,7 +33,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version.
  */
-define( 'CTABUTTON_VERSION', '1.1.3' );
+define( 'CTABUTTON_VERSION', '1.1.4' );
 
 /**
  * Set plugin basename
